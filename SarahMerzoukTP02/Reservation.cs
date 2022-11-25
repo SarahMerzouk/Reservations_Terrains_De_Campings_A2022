@@ -11,5 +11,6 @@ namespace SarahMerzoukTP02
         private int _noReservation;
         private int _noCamping;
         private string _nomClient;
+        private string _courriel;
     }
 }
