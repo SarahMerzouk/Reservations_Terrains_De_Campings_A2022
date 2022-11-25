@@ -8,6 +8,7 @@ namespace SarahMerzoukTP02
 {
     internal class Camping
     {
+        private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
 
         private int _noCamping;
         private string _nomCamping;
@@ -19,7 +20,7 @@ namespace SarahMerzoukTP02
             _noCamping = pNoCamping;
             _nomCamping = pNomCamping;
             _nbTerrains = pNbTerrains;
-            _cheminImage = pCheminImage;
+            _cheminImage = chemin + pCheminImage;
         }
 
         public Camping() { }
