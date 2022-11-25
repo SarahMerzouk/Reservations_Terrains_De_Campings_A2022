@@ -20,7 +20,7 @@ namespace SarahMerzoukTP02
             _noCamping = pNoCamping;
             _nomCamping = pNomCamping;
             _nbTerrains = pNbTerrains;
-            _cheminImage = chemin + pCheminImage;
+            _cheminImage =  chemin + pCheminImage;
         }
 
         public Camping() { }

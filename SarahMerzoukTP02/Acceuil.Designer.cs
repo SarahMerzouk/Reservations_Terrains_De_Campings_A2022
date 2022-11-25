@@ -76,9 +76,9 @@
             // 
             // pictureBox_campings
             // 
-            this.pictureBox_campings.Location = new System.Drawing.Point(266, 209);
+            this.pictureBox_campings.Location = new System.Drawing.Point(112, 209);
             this.pictureBox_campings.Name = "pictureBox_campings";
-            this.pictureBox_campings.Size = new System.Drawing.Size(603, 372);
+            this.pictureBox_campings.Size = new System.Drawing.Size(757, 410);
             this.pictureBox_campings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_campings.TabIndex = 3;
             this.pictureBox_campings.TabStop = false;
@@ -90,6 +90,7 @@
             this.comboBox_choixHebergement.Name = "comboBox_choixHebergement";
             this.comboBox_choixHebergement.Size = new System.Drawing.Size(920, 56);
             this.comboBox_choixHebergement.TabIndex = 4;
+            this.comboBox_choixHebergement.SelectedIndexChanged += new System.EventHandler(this.comboBox_choixHebergement_SelectedIndexChanged);
             // 
             // dateTimePicker_debut
             // 
