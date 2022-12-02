@@ -110,6 +110,6 @@ namespace SarahMerzoukTP02
             {
                 errorProvider_typePaiement.Clear();
             }
-        }
+        }//
     }
 }
