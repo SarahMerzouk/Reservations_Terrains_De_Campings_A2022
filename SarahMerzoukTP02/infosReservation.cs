@@ -18,7 +18,7 @@ namespace SarahMerzoukTP02
         DateTimePicker dateDebut;
         DateTimePicker dateFin;
         int numeroReservation = 0;
-        int nbDePersonnes;
+        decimal nbDePersonnes;
         public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin)
         {
             campingChoisi = pCampingChoisi;
@@ -139,6 +139,17 @@ namespace SarahMerzoukTP02
                 errorProvider_typePaiement.Clear();
 
             }
+        }
+
+        private void numericUpDown_nbAdultes_ValueChanged(object sender, EventArgs e)
+        {
+            textBox_nbAdultes.Text = numericUpDown_nbAdultes.Value.ToString();
+            nbDePersonnes += numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value; //
+        }
+
+        private void numericUpDown_nbEnfants_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

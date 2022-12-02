@@ -338,6 +338,7 @@
             this.numericUpDown_nbAdultes.Name = "numericUpDown_nbAdultes";
             this.numericUpDown_nbAdultes.Size = new System.Drawing.Size(300, 55);
             this.numericUpDown_nbAdultes.TabIndex = 27;
+            this.numericUpDown_nbAdultes.ValueChanged += new System.EventHandler(this.numericUpDown_nbAdultes_ValueChanged);
             // 
             // numericUpDown_nbEnfants
             // 
@@ -350,6 +351,7 @@
             this.numericUpDown_nbEnfants.Name = "numericUpDown_nbEnfants";
             this.numericUpDown_nbEnfants.Size = new System.Drawing.Size(300, 55);
             this.numericUpDown_nbEnfants.TabIndex = 28;
+            this.numericUpDown_nbEnfants.ValueChanged += new System.EventHandler(this.numericUpDown_nbEnfants_ValueChanged);
             // 
             // label_adultes
             // 
