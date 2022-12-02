@@ -67,6 +67,10 @@ namespace SarahMerzoukTP02
             comboBox_typeDePaiement.Items.Add("Interac");
             comboBox_typeDePaiement.Items.Add("Crédit-Visa");
             comboBox_typeDePaiement.Items.Add("Crédit-MasterCard");
+
+            // Affichage du total de nuit
+            int nbNuit = dateFin.Value.DayOfYear - dateDebut.Value.DayOfYear;
+            textBox_nbNuits.Text = nbNuit.ToString();
         }
 
         private void textBox_nom_TextChanged(object sender, EventArgs e)
