@@ -136,7 +136,6 @@
             this.button_reserver.TabIndex = 3;
             this.button_reserver.Text = "Réserver le terrain";
             this.button_reserver.UseVisualStyleBackColor = true;
-            this.button_reserver.Click += new System.EventHandler(this.button_reserver_Click);
             // 
             // button_terrainsDispos
             // 
@@ -597,6 +596,7 @@
             this.faireLaRéservationToolStripMenuItem.Name = "faireLaRéservationToolStripMenuItem";
             this.faireLaRéservationToolStripMenuItem.Size = new System.Drawing.Size(619, 66);
             this.faireLaRéservationToolStripMenuItem.Text = "Faire la réservation";
+            this.faireLaRéservationToolStripMenuItem.Click += new System.EventHandler(this.faireLaRéservationToolStripMenuItem_Click);
             // 
             // afficherUneRéservationToolStripMenuItem
             // 

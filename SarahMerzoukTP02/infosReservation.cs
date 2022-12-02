@@ -111,26 +111,7 @@ namespace SarahMerzoukTP02
 
         private void button_reserver_Click(object sender, EventArgs e)
         {
-            // Valider le nombre maximum de personnes
-            if (numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value > MAX_RESERVATION)
-            {
-                errorProvider_maxDePersonnes.SetError(numericUpDown_nbAdultes, "Le maximum est de 8 personnes");
-            }
-            else
-            {
-                errorProvider_maxDePersonnes.Clear();
-            }
-
-            // Vérifier si un type de paiement a été choisie
-            if (comboBox_typeDePaiement.Text == "")
-            {
-                errorProvider_typePaiement.SetError(comboBox_typeDePaiement, "Il faut choisir un type de paiement");
-            }
-            else
-            {
-                errorProvider_typePaiement.Clear();
-
-            }
+            
         }
 
         private void numericUpDown_nbAdultes_ValueChanged(object sender, EventArgs e)
@@ -186,6 +167,30 @@ namespace SarahMerzoukTP02
             coutTotal = (numericUpDown_nbAdultes.Value * prixAdulte) + (numericUpDown_nbEnfants.Value * prixEnfant);
 
             return coutTotal;
+        }
+
+        private void faireLaRéservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Valider le nombre maximum de personnes
+            if (numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value > MAX_RESERVATION)
+            {
+                errorProvider_maxDePersonnes.SetError(numericUpDown_nbAdultes, "Le maximum est de 8 personnes");
+            }
+            else
+            {
+                errorProvider_maxDePersonnes.Clear();
+            }
+
+            // Vérifier si un type de paiement a été choisie
+            if (comboBox_typeDePaiement.Text == "")
+            {
+                errorProvider_typePaiement.SetError(comboBox_typeDePaiement, "Il faut choisir un type de paiement");
+            }
+            else
+            {
+                errorProvider_typePaiement.Clear();
+
+            }
         }
     }
 }
