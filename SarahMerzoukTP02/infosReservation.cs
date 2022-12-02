@@ -63,7 +63,9 @@ namespace SarahMerzoukTP02
             }
 
             // Ajout des types de paiements dans le comboBox
-            comboBox_typeDePaiement.Items.Add();
+            comboBox_typeDePaiement.Items.Add("Interac");
+            comboBox_typeDePaiement.Items.Add("Crédit-Visa");
+            comboBox_typeDePaiement.Items.Add("Crédit-MasterCard");
         }
 
         private void textBox_nom_TextChanged(object sender, EventArgs e)
@@ -110,6 +112,6 @@ namespace SarahMerzoukTP02
             {
                 errorProvider_typePaiement.Clear();
             }
-        }//
+        }
     }
 }
