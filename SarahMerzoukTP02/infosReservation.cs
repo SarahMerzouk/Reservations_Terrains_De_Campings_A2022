@@ -13,12 +13,19 @@ namespace SarahMerzoukTP02
 {
     public partial class infosReservation : Form
     {
-        const int MAX_RESERVATION = 8;
+        const int maxReservation = 8;
+        const int nbJours = 365;
+
+        int nbTerrains;
+        Boolean[,] campingDispo;
+
         Camping campingChoisi;
         DateTimePicker dateDebut;
         DateTimePicker dateFin;
         int numeroReservation = 0;
+
         decimal nbDePersonnes;
+
         public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin)
         {
             campingChoisi = pCampingChoisi;
@@ -71,6 +78,19 @@ namespace SarahMerzoukTP02
             // Affichage du total de nuit
             int nbNuit = dateFin.Value.DayOfYear - dateDebut.Value.DayOfYear;
             textBox_nbNuits.Text = nbNuit.ToString();
+            
+            // tableau pour réservation - disponibilité du camping
+            nbTerrains = campingChoisi.getNbTerrains();
+            campingDispo = new Boolean[nbTerrains, nbJours];
+
+            // initialiser des terrains dans le camping
+            for (int i = 0; i < nbTerrains; i++)
+            {
+                for (int j = 0; j < nbJours; j++)
+                {
+                    campingDispo[i, j] = false;
+                }
+            }
 
         }
 
@@ -172,7 +192,7 @@ namespace SarahMerzoukTP02
         private void faireLaRéservationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Valider le nombre maximum de personnes
-            if (numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value > MAX_RESERVATION)
+            if (numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value > maxReservation)
             {
                 errorProvider_maxDePersonnes.SetError(numericUpDown_nbAdultes, "Le maximum est de 8 personnes");
             }
