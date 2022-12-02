@@ -144,12 +144,13 @@ namespace SarahMerzoukTP02
         private void numericUpDown_nbAdultes_ValueChanged(object sender, EventArgs e)
         {
             textBox_nbAdultes.Text = numericUpDown_nbAdultes.Value.ToString();
-            nbDePersonnes += numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value; //
+            nbDePersonnes += numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value; 
         }
 
         private void numericUpDown_nbEnfants_ValueChanged(object sender, EventArgs e)
         {
-            
+            textBox_nbEnfants.Text = numericUpDown_nbEnfants.Value.ToString();
+            nbDePersonnes += numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value;
         }
     }
 }
