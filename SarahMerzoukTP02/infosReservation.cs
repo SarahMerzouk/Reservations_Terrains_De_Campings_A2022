@@ -63,6 +63,7 @@ namespace SarahMerzoukTP02
             }
 
             // Ajout des types de paiements dans le comboBox
+            comboBox_typeDePaiement.Items.Add();
         }
 
         private void textBox_nom_TextChanged(object sender, EventArgs e)
