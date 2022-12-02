@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SarahMerzoukTP02
 {
-    internal class Camping
+    public class Camping
     {
         private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
 
@@ -14,13 +14,15 @@ namespace SarahMerzoukTP02
         private string _nomCamping;
         private int _nbTerrains;
         private string _cheminImage;
+        private string _nomFichierCamping;
 
-        public Camping(int pNoCamping, string pNomCamping, int pNbTerrains, string pCheminImage)
+        public Camping(int pNoCamping, string pNomCamping, int pNbTerrains, string pCheminImage, string pNomFichier)
         {
             _noCamping = pNoCamping;
             _nomCamping = pNomCamping;
             _nbTerrains = pNbTerrains;
             _cheminImage =  chemin + pCheminImage;
+            _nomFichierCamping = pNomFichier;
         }
 
         public Camping() { }
@@ -43,6 +45,11 @@ namespace SarahMerzoukTP02
         public string getCheminImage()
         {
             return _cheminImage;
+        }
+
+        public string getNomFichierDuCamping()
+        {
+            return _nomFichierCamping;
         }
 
     }

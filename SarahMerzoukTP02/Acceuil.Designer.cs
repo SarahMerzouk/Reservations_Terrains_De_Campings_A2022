@@ -95,16 +95,22 @@
             // dateTimePicker_debut
             // 
             this.dateTimePicker_debut.Location = new System.Drawing.Point(37, 800);
+            this.dateTimePicker_debut.MaxDate = new System.DateTime(2022, 10, 30, 0, 0, 0, 0);
+            this.dateTimePicker_debut.MinDate = new System.DateTime(2022, 5, 1, 0, 0, 0, 0);
             this.dateTimePicker_debut.Name = "dateTimePicker_debut";
             this.dateTimePicker_debut.Size = new System.Drawing.Size(411, 55);
             this.dateTimePicker_debut.TabIndex = 5;
+            this.dateTimePicker_debut.Value = new System.DateTime(2022, 10, 30, 0, 0, 0, 0);
             // 
             // dateTimePicker_fin
             // 
             this.dateTimePicker_fin.Location = new System.Drawing.Point(507, 800);
+            this.dateTimePicker_fin.MaxDate = new System.DateTime(2022, 10, 31, 0, 0, 0, 0);
+            this.dateTimePicker_fin.MinDate = new System.DateTime(2022, 5, 2, 0, 0, 0, 0);
             this.dateTimePicker_fin.Name = "dateTimePicker_fin";
             this.dateTimePicker_fin.Size = new System.Drawing.Size(450, 55);
             this.dateTimePicker_fin.TabIndex = 6;
+            this.dateTimePicker_fin.Value = new System.DateTime(2022, 10, 26, 0, 0, 0, 0);
             // 
             // label_dateDebut
             // 
@@ -134,6 +140,7 @@
             this.button_reservation.TabIndex = 9;
             this.button_reservation.Text = "Réservation";
             this.button_reservation.UseVisualStyleBackColor = true;
+            this.button_reservation.Click += new System.EventHandler(this.button_reservation_Click);
             // 
             // button_quitter
             // 
@@ -143,6 +150,7 @@
             this.button_quitter.TabIndex = 10;
             this.button_quitter.Text = "Quitter";
             this.button_quitter.UseVisualStyleBackColor = true;
+            this.button_quitter.Click += new System.EventHandler(this.button_quitter_Click);
             // 
             // Acceuil
             // 

@@ -96,7 +96,7 @@
             // 
             this.label_campingChoisi.AutoSize = true;
             this.label_campingChoisi.Font = new System.Drawing.Font("MV Boli", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label_campingChoisi.Location = new System.Drawing.Point(36, 96);
+            this.label_campingChoisi.Location = new System.Drawing.Point(50, 47);
             this.label_campingChoisi.Name = "label_campingChoisi";
             this.label_campingChoisi.Size = new System.Drawing.Size(475, 85);
             this.label_campingChoisi.TabIndex = 0;
