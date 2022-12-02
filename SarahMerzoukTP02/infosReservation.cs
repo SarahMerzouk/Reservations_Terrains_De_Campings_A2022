@@ -71,6 +71,7 @@ namespace SarahMerzoukTP02
             // Affichage du total de nuit
             int nbNuit = dateFin.Value.DayOfYear - dateDebut.Value.DayOfYear;
             textBox_nbNuits.Text = nbNuit.ToString();
+
         }
 
         private void textBox_nom_TextChanged(object sender, EventArgs e)
@@ -137,6 +138,10 @@ namespace SarahMerzoukTP02
             textBox_nbAdultes.Text = numericUpDown_nbAdultes.Value.ToString();
             nbDePersonnes = numericUpDown_nbEnfants.Value + numericUpDown_nbAdultes.Value; //
             textBox_nbPersonnes.Text = nbDePersonnes.ToString();
+
+
+            // Affichage du cout total
+            textBox_coutTotal.Text = coutTotal(campingChoisi).ToString() + " $";
         }
 
         private void numericUpDown_nbEnfants_ValueChanged(object sender, EventArgs e)
@@ -144,6 +149,43 @@ namespace SarahMerzoukTP02
             textBox_nbEnfants.Text = numericUpDown_nbEnfants.Value.ToString();
             nbDePersonnes = numericUpDown_nbEnfants.Value + numericUpDown_nbAdultes.Value;
             textBox_nbPersonnes.Text = nbDePersonnes.ToString();
+
+
+            // Affichage du cout total
+            textBox_coutTotal.Text = coutTotal(campingChoisi).ToString() + " $";
+        }
+
+        public decimal coutTotal(Camping camping)
+        {
+            decimal prixAdulte;
+            decimal prixEnfant;
+            decimal coutTotal;
+
+            if (camping.getNoCamping() == 0) // Parc du Bic
+            {
+                prixAdulte = 20;
+                prixEnfant = 5;
+
+            } else if (camping.getNoCamping() == 1) // Parc du Mont_Orford
+            {
+                prixAdulte = 15;
+                prixEnfant = 5;
+
+            } else if (camping.getNoCamping() == 2) // Camping du Rocher Percé
+            {
+                prixAdulte = 30;
+                prixEnfant = 10;
+
+            }
+            else // Camping de la plage de St-Siméon
+            {
+                prixAdulte = 25;
+                prixEnfant = 0;
+            }
+
+            coutTotal = (numericUpDown_nbAdultes.Value * prixAdulte) + (numericUpDown_nbEnfants.Value * prixEnfant);
+
+            return coutTotal;
         }
     }
 }
