@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label_campingChoisi = new System.Windows.Forms.Label();
             this.pictureBox_campingChoisi = new System.Windows.Forms.PictureBox();
             this.comboBox_terrains = new System.Windows.Forms.ComboBox();
@@ -85,11 +86,19 @@
             this.faireLaRéservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherUneRéservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retourAuMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider_nom = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_courriel = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_typePaiement = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_maxDePersonnes = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_campingChoisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbAdultes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbEnfants)).BeginInit();
             this.statusStrip_reservation.SuspendLayout();
             this.menuStrip_reservation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_nom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_courriel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_typePaiement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_maxDePersonnes)).BeginInit();
             this.SuspendLayout();
             // 
             // label_campingChoisi
@@ -418,6 +427,7 @@
             this.comboBox_typeDePaiement.Name = "comboBox_typeDePaiement";
             this.comboBox_typeDePaiement.Size = new System.Drawing.Size(363, 56);
             this.comboBox_typeDePaiement.TabIndex = 39;
+            this.comboBox_typeDePaiement.SelectedIndexChanged += new System.EventHandler(this.comboBox_typeDePaiement_SelectedIndexChanged);
             // 
             // textBox_nom
             // 
@@ -425,6 +435,7 @@
             this.textBox_nom.Name = "textBox_nom";
             this.textBox_nom.Size = new System.Drawing.Size(363, 55);
             this.textBox_nom.TabIndex = 40;
+            this.textBox_nom.TextChanged += new System.EventHandler(this.textBox_nom_TextChanged);
             // 
             // textBox_courriel
             // 
@@ -432,6 +443,7 @@
             this.textBox_courriel.Name = "textBox_courriel";
             this.textBox_courriel.Size = new System.Drawing.Size(363, 55);
             this.textBox_courriel.TabIndex = 41;
+            this.textBox_courriel.TextChanged += new System.EventHandler(this.textBox_courriel_TextChanged);
             // 
             // label_facture
             // 
@@ -596,6 +608,22 @@
             this.retourAuMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(619, 66);
             this.retourAuMenuPrincipalToolStripMenuItem.Text = "Retour au menu principal";
             // 
+            // errorProvider_nom
+            // 
+            this.errorProvider_nom.ContainerControl = this;
+            // 
+            // errorProvider_courriel
+            // 
+            this.errorProvider_courriel.ContainerControl = this;
+            // 
+            // errorProvider_typePaiement
+            // 
+            this.errorProvider_typePaiement.ContainerControl = this;
+            // 
+            // errorProvider_maxDePersonnes
+            // 
+            this.errorProvider_maxDePersonnes.ContainerControl = this;
+            // 
             // infosReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
@@ -662,6 +690,10 @@
             this.statusStrip_reservation.PerformLayout();
             this.menuStrip_reservation.ResumeLayout(false);
             this.menuStrip_reservation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_nom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_courriel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_typePaiement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_maxDePersonnes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -726,5 +758,9 @@
         private ToolStripMenuItem faireLaRéservationToolStripMenuItem;
         private ToolStripMenuItem afficherUneRéservationToolStripMenuItem;
         private ToolStripMenuItem retourAuMenuPrincipalToolStripMenuItem;
+        private ErrorProvider errorProvider_nom;
+        private ErrorProvider errorProvider_courriel;
+        private ErrorProvider errorProvider_typePaiement;
+        private ErrorProvider errorProvider_maxDePersonnes;
     }
 }

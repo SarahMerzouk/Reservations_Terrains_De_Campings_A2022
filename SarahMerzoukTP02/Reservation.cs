@@ -13,15 +13,15 @@ namespace SarahMerzoukTP02
         private string _nomClient;
         private string _courriel;
         private string _typePaiement;
-        private DateTime _debutReservation;
-        private DateTime _finReservation;
+        private DateTimePicker _debutReservation;
+        private DateTimePicker _finReservation;
         private int _nbAdultes;
         private int _nbEnfants;
         private float _coutTotal;
 
         public Reservation() { }
 
-        public Reservation(int noReservation , int noCamping, string nomClient, string courriel, string payement, DateTime debut, DateTime fin, int nbAdultes, int nbEnfants, float cout  )
+        public Reservation(int noReservation , int noCamping, string nomClient, string courriel, string payement, DateTimePicker debut, DateTimePicker fin, int nbAdultes, int nbEnfants, float cout  )
         {
             _noReservation = noReservation;
             _noCamping = noCamping;
@@ -60,12 +60,12 @@ namespace SarahMerzoukTP02
             return _typePaiement;
         }
 
-        public DateTime getDebutReservation()
+        public DateTimePicker getDebutReservation()
         {
             return _debutReservation;
         }
 
-        public DateTime getFinReservation()
+        public DateTimePicker getFinReservation()
         {
             return _finReservation;
         }

@@ -66,7 +66,7 @@ namespace SarahMerzoukTP02
         {
             if (dateTimePicker_debut.Value.DayOfYear < dateTimePicker_fin.Value.DayOfYear)
             {
-                infosReservation saisirInfos = new infosReservation(campingChoisi);
+                infosReservation saisirInfos = new infosReservation(campingChoisi, dateTimePicker_debut, dateTimePicker_fin);
 
                 saisirInfos.ShowDialog();
             } else
