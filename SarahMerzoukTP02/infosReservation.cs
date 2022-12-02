@@ -18,6 +18,7 @@ namespace SarahMerzoukTP02
         DateTimePicker dateDebut;
         DateTimePicker dateFin;
         int numeroReservation = 0;
+        int nbDePersonnes;
         public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin)
         {
             campingChoisi = pCampingChoisi;
@@ -67,6 +68,7 @@ namespace SarahMerzoukTP02
             comboBox_typeDePaiement.Items.Add("Crédit-Visa");
             comboBox_typeDePaiement.Items.Add("Crédit-MasterCard");
             comboBox_typeDePaiement.Items.Add("");
+
         }
 
         private void textBox_nom_TextChanged(object sender, EventArgs e)
@@ -117,6 +119,16 @@ namespace SarahMerzoukTP02
 
         private void button_reserver_Click(object sender, EventArgs e)
         {
+            // Valider le nombre maximum de personnes
+            if (numericUpDown_nbAdultes.Value + numericUpDown_nbEnfants.Value > MAX_RESERVATION)
+            {
+                errorProvider_maxDePersonnes.SetError(numericUpDown_nbAdultes, "Le maximum est de 8 personnes");
+            }
+            else
+            {
+                errorProvider_maxDePersonnes.Clear();
+            }
+
             // Vérifier si un type de paiement a été choisie
             if (comboBox_typeDePaiement.Text == "")
             {
@@ -125,6 +137,7 @@ namespace SarahMerzoukTP02
             else
             {
                 errorProvider_typePaiement.Clear();
+
             }
         }
     }
