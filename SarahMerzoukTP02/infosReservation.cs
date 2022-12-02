@@ -66,6 +66,7 @@ namespace SarahMerzoukTP02
             comboBox_typeDePaiement.Items.Add("Interac");
             comboBox_typeDePaiement.Items.Add("Crédit-Visa");
             comboBox_typeDePaiement.Items.Add("Crédit-MasterCard");
+            comboBox_typeDePaiement.Items.Add("");
         }
 
         private void textBox_nom_TextChanged(object sender, EventArgs e)
@@ -105,10 +106,23 @@ namespace SarahMerzoukTP02
 
         private void comboBox_typeDePaiement_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox_typeDePaiement.Text != "")
+            if (comboBox_typeDePaiement.Text == "")
             {
                 errorProvider_typePaiement.SetError(comboBox_typeDePaiement, "Il faut choisir un type de paiement");
             } else
+            {
+                errorProvider_typePaiement.Clear();
+            }
+        }
+
+        private void button_reserver_Click(object sender, EventArgs e)
+        {
+            // Vérifier si un type de paiement a été choisie
+            if (comboBox_typeDePaiement.Text == "")
+            {
+                errorProvider_typePaiement.SetError(comboBox_typeDePaiement, "Il faut choisir un type de paiement");
+            }
+            else
             {
                 errorProvider_typePaiement.Clear();
             }

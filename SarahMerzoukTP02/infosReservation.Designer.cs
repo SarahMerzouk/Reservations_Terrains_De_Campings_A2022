@@ -136,6 +136,7 @@
             this.button_reserver.TabIndex = 3;
             this.button_reserver.Text = "Réserver le terrain";
             this.button_reserver.UseVisualStyleBackColor = true;
+            this.button_reserver.Click += new System.EventHandler(this.button_reserver_Click);
             // 
             // button_terrainsDispos
             // 
@@ -427,7 +428,6 @@
             this.comboBox_typeDePaiement.Name = "comboBox_typeDePaiement";
             this.comboBox_typeDePaiement.Size = new System.Drawing.Size(363, 56);
             this.comboBox_typeDePaiement.TabIndex = 39;
-            this.comboBox_typeDePaiement.SelectedIndexChanged += new System.EventHandler(this.comboBox_typeDePaiement_SelectedIndexChanged);
             // 
             // textBox_nom
             // 
