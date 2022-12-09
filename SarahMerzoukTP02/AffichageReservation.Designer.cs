@@ -203,6 +203,7 @@
             this.Controls.Add(this.label_campingChoisiAffichage);
             this.Name = "AffichageReservation";
             this.Text = "Affichage de la réservation";
+            this.Load += new System.EventHandler(this.AffichageReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_campingChoisieAffichage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

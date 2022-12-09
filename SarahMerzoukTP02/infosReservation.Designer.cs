@@ -609,6 +609,7 @@
             this.afficherUneRéservationToolStripMenuItem.Name = "afficherUneRéservationToolStripMenuItem";
             this.afficherUneRéservationToolStripMenuItem.Size = new System.Drawing.Size(619, 66);
             this.afficherUneRéservationToolStripMenuItem.Text = "Afficher une réservation";
+            this.afficherUneRéservationToolStripMenuItem.Click += new System.EventHandler(this.afficherUneRéservationToolStripMenuItem_Click);
             // 
             // retourAuMenuPrincipalToolStripMenuItem
             // 

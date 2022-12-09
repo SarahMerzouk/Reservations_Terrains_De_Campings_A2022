@@ -28,8 +28,8 @@ namespace SarahMerzoukTP02
         decimal nbDePersonnes;
 
         Reservation uneReservation;
-        Reservation[] desReservations;
-        int ctrReservation = 0;
+        Reservation[] desReservations = new Reservation[200];
+        int ctrReservation = -1;
 
         private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
 
@@ -231,12 +231,12 @@ namespace SarahMerzoukTP02
 
             int nbAdultes = Convert.ToInt32(textBox_nbAdultes.Text);
             int nbEnfants = Convert.ToInt32(textBox_nbEnfants.Text);
+            decimal cout = coutTotal(campingChoisi);
 
             if (comboBox_terrains.SelectedIndex != -1) //
             {
                 int dateArrivee = dateDebut.Value.DayOfYear;
                 int dateDepart = dateFin.Value.DayOfYear;
-                decimal cout = Convert.ToDecimal(textBox_coutTotal.Text);
 
                 if (dateArrivee < dateDepart)
                 {
@@ -381,6 +381,12 @@ namespace SarahMerzoukTP02
         private void retourAuMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void afficherUneRéservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AffichageReservation affichage = new AffichageReservation(desReservations, campingChoisi);
+            affichage.ShowDialog();
         }
     }
 }

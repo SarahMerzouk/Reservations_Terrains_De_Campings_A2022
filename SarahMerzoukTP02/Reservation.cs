@@ -80,7 +80,7 @@ namespace SarahMerzoukTP02
             return _nbEnfants;
         }
 
-        public float getCoutTotal()
+        public decimal getCoutTotal()
         {
             return _coutTotal;
         }
