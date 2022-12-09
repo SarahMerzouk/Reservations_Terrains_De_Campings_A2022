@@ -23,17 +23,18 @@ namespace SarahMerzoukTP02
         Camping campingChoisi;
         DateTimePicker dateDebut;
         DateTimePicker dateFin;
-        int numeroReservation = 0;
+        int numeroReservation;
 
         decimal nbDePersonnes;
 
         private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
 
-        public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin)
+        public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin, int pNo)
         {
             campingChoisi = pCampingChoisi;
             dateDebut = pDebut;
             dateFin = pFin;
+            numeroReservation = pNo;
 
             InitializeComponent();
         }
@@ -217,8 +218,7 @@ namespace SarahMerzoukTP02
 
         private void button_reserver_Click_1(object sender, EventArgs e)
         {
-            numeroReservation++;
-
+            
             saveFileDialogFichier.InitialDirectory = chemin;
             saveFileDialogFichier.Title = campingChoisi.getNomFichierDuCamping();
             saveFileDialogFichier.FileName = campingChoisi.getNomFichierDuCamping();
@@ -270,7 +270,7 @@ namespace SarahMerzoukTP02
 
                 }
 
-                statusStrip_reservation.Text = "Réservation sauvegardée dans le fichier";
+                toolStripStatus_reservation.Text = "Réservation sauvegardée dans le fichier";
             }
         }
 
