@@ -575,7 +575,7 @@
             this.réservationToolStripMenuItem});
             this.menuStrip_reservation.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_reservation.Name = "menuStrip_reservation";
-            this.menuStrip_reservation.Size = new System.Drawing.Size(1782, 56);
+            this.menuStrip_reservation.Size = new System.Drawing.Size(1782, 61);
             this.menuStrip_reservation.TabIndex = 54;
             this.menuStrip_reservation.Text = "menuStrip1";
             // 
@@ -587,7 +587,7 @@
             this.afficherUneRéservationToolStripMenuItem,
             this.retourAuMenuPrincipalToolStripMenuItem});
             this.réservationToolStripMenuItem.Name = "réservationToolStripMenuItem";
-            this.réservationToolStripMenuItem.Size = new System.Drawing.Size(232, 52);
+            this.réservationToolStripMenuItem.Size = new System.Drawing.Size(232, 57);
             this.réservationToolStripMenuItem.Text = "Réservation";
             // 
             // nouvelleRéservationToolStripMenuItem
@@ -595,6 +595,7 @@
             this.nouvelleRéservationToolStripMenuItem.Name = "nouvelleRéservationToolStripMenuItem";
             this.nouvelleRéservationToolStripMenuItem.Size = new System.Drawing.Size(619, 66);
             this.nouvelleRéservationToolStripMenuItem.Text = "Nouvelle réservation";
+            this.nouvelleRéservationToolStripMenuItem.Click += new System.EventHandler(this.nouvelleRéservationToolStripMenuItem_Click);
             // 
             // faireLaRéservationToolStripMenuItem
             // 
@@ -614,6 +615,7 @@
             this.retourAuMenuPrincipalToolStripMenuItem.Name = "retourAuMenuPrincipalToolStripMenuItem";
             this.retourAuMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(619, 66);
             this.retourAuMenuPrincipalToolStripMenuItem.Text = "Retour au menu principal";
+            this.retourAuMenuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.retourAuMenuPrincipalToolStripMenuItem_Click);
             // 
             // errorProvider_nom
             // 

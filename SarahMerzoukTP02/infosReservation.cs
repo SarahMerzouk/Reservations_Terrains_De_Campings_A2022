@@ -353,5 +353,20 @@ namespace SarahMerzoukTP02
 
             }
         }
+
+        private void nouvelleRéservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            numericUpDown_nbAdultes.Value = 0;
+            numericUpDown_nbEnfants.Value = 0;
+            textBox_courriel.Text = "";
+            textBox_nom.Text = "";
+            comboBox_typeDePaiement.Text = "";
+            button_reserver.Enabled = false;
+        }
+
+        private void retourAuMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
