@@ -17,11 +17,11 @@ namespace SarahMerzoukTP02
         private DateTimePicker _finReservation;
         private int _nbAdultes;
         private int _nbEnfants;
-        private float _coutTotal;
+        private decimal _coutTotal;
 
         public Reservation() { }
 
-        public Reservation(int noReservation , int noCamping, string nomClient, string courriel, string payement, DateTimePicker debut, DateTimePicker fin, int nbAdultes, int nbEnfants, float cout  )
+        public Reservation(int noReservation , int noCamping, string nomClient, string courriel, string payement, DateTimePicker debut, DateTimePicker fin, int nbAdultes, int nbEnfants, decimal cout  )
         {
             _noReservation = noReservation;
             _noCamping = noCamping;

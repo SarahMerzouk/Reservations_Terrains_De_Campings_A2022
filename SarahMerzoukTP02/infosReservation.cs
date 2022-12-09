@@ -27,6 +27,10 @@ namespace SarahMerzoukTP02
 
         decimal nbDePersonnes;
 
+        Reservation uneReservation;
+        Reservation[] desReservations;
+        int ctrReservation = 0;
+
         private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
 
         public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin, int pNo)
@@ -209,6 +213,7 @@ namespace SarahMerzoukTP02
             else
             {
                 errorProvider_typePaiement.Clear();
+                
 
             }
         }
@@ -222,12 +227,16 @@ namespace SarahMerzoukTP02
             saveFileDialogFichier.FileName = campingChoisi.getNomFichierDuCamping();
 
             saveFileDialogFichier.Filter = "Fichier texte|*.txt";
-            saveFileDialogFichier.FilterIndex = 1; 
+            saveFileDialogFichier.FilterIndex = 1;
+
+            int nbAdultes = Convert.ToInt32(textBox_nbAdultes.Text);
+            int nbEnfants = Convert.ToInt32(textBox_nbEnfants.Text);
 
             if (comboBox_terrains.SelectedIndex != -1) //
             {
                 int dateArrivee = dateDebut.Value.DayOfYear;
                 int dateDepart = dateFin.Value.DayOfYear;
+                decimal cout = Convert.ToDecimal(textBox_coutTotal.Text);
 
                 if (dateArrivee < dateDepart)
                 {
@@ -247,6 +256,11 @@ namespace SarahMerzoukTP02
                                   + comboBox_typeDePaiement.SelectedItem + " ; " + textBox_coutTotal.Text + "\r\n");
 
                                 ecriture.Close();
+
+                                ctrReservation++;
+                                uneReservation = new Reservation(numeroReservation, campingChoisi.getNoCamping(), textBox_nom.Text, textBox_courriel.Text, comboBox_typeDePaiement.Text, dateDebut, dateFin, nbAdultes, nbEnfants, cout); ;
+                                desReservations[ctrReservation] = uneReservation;
+
                             } else
                             {
                                 MessageBox.Show("Une réservation à 0 nuit ou à 0 nombre de personnes n’existe pas dans notre système.");
