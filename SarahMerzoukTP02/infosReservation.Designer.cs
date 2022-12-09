@@ -90,8 +90,8 @@
             this.errorProvider_courriel = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_typePaiement = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_maxDePersonnes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBoxLogReservation = new System.Windows.Forms.TextBox();
             this.saveFileDialogFichier = new System.Windows.Forms.SaveFileDialog();
+            this.listBox_reservation = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_campingChoisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbAdultes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbEnfants)).BeginInit();
@@ -433,6 +433,7 @@
             this.comboBox_typeDePaiement.Name = "comboBox_typeDePaiement";
             this.comboBox_typeDePaiement.Size = new System.Drawing.Size(363, 56);
             this.comboBox_typeDePaiement.TabIndex = 39;
+            this.comboBox_typeDePaiement.SelectedIndexChanged += new System.EventHandler(this.comboBox_typeDePaiement_SelectedIndexChanged);
             // 
             // textBox_nom
             // 
@@ -630,20 +631,21 @@
             // 
             this.errorProvider_maxDePersonnes.ContainerControl = this;
             // 
-            // textBoxLogReservation
+            // listBox_reservation
             // 
-            this.textBoxLogReservation.Location = new System.Drawing.Point(449, 777);
-            this.textBoxLogReservation.Multiline = true;
-            this.textBoxLogReservation.Name = "textBoxLogReservation";
-            this.textBoxLogReservation.Size = new System.Drawing.Size(411, 500);
-            this.textBoxLogReservation.TabIndex = 55;
+            this.listBox_reservation.FormattingEnabled = true;
+            this.listBox_reservation.ItemHeight = 48;
+            this.listBox_reservation.Location = new System.Drawing.Point(384, 777);
+            this.listBox_reservation.Name = "listBox_reservation";
+            this.listBox_reservation.Size = new System.Drawing.Size(482, 484);
+            this.listBox_reservation.TabIndex = 56;
             // 
             // infosReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 1503);
-            this.Controls.Add(this.textBoxLogReservation);
+            this.Controls.Add(this.listBox_reservation);
             this.Controls.Add(this.statusStrip_reservation);
             this.Controls.Add(this.menuStrip_reservation);
             this.Controls.Add(this.textBox_coutTotal);
@@ -777,7 +779,7 @@
         private ErrorProvider errorProvider_courriel;
         private ErrorProvider errorProvider_typePaiement;
         private ErrorProvider errorProvider_maxDePersonnes;
-        private TextBox textBoxLogReservation;
         private SaveFileDialog saveFileDialogFichier;
+        private ListBox listBox_reservation;
     }
 }

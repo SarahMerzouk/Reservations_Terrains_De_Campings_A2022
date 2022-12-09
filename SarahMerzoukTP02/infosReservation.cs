@@ -41,6 +41,8 @@ namespace SarahMerzoukTP02
 
         private void Reservation_Load(object sender, EventArgs e)
         {
+            button_reserver.Enabled = false;
+
             // Affichage des informations déjà connues
             label_campingChoisi.Text = campingChoisi.getNomCamping();
             pictureBox_campingChoisi.ImageLocation = campingChoisi.getCheminImage();
@@ -132,11 +134,6 @@ namespace SarahMerzoukTP02
             }
         }
 
-        private void button_reserver_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void numericUpDown_nbAdultes_ValueChanged(object sender, EventArgs e)
         {
             textBox_nbAdultes.Text = numericUpDown_nbAdultes.Value.ToString();
@@ -224,7 +221,7 @@ namespace SarahMerzoukTP02
             saveFileDialogFichier.FileName = campingChoisi.getNomFichierDuCamping();
 
             saveFileDialogFichier.Filter = "Fichier texte|*.txt";
-            saveFileDialogFichier.FilterIndex = 1;
+            saveFileDialogFichier.FilterIndex = 1; 
 
             if (comboBox_terrains.SelectedIndex != -1) //
             {
@@ -233,18 +230,7 @@ namespace SarahMerzoukTP02
 
                 if (dateArrivee < dateDepart)
                 {
-                    // faire la réservation dans le tab => mettre à True les journées qui sont réservées
-                    for (int ctr = dateArrivee; ctr < dateDepart; ctr++)
-                    {
-                        campingDispo[comboBox_terrains.SelectedIndex, ctr] = true;
-
-                        // ajout dans le log de réservation
-                        textBoxLogReservation.Text += "Site : " +
-                            (comboBox_terrains.SelectedIndex + 1).ToString() + " Jour: " + ctr +
-                            "\r\n";
-                    }
-
-
+                  
                     // Écriture de la réservation dans un fichier texte
                     if (saveFileDialogFichier.ShowDialog() == DialogResult.OK)
                     {
@@ -258,6 +244,17 @@ namespace SarahMerzoukTP02
                                 + comboBox_typeDePaiement.SelectedItem + " ; " + textBox_coutTotal.Text + "\r\n");
 
                             ecriture.Close();
+
+                            // faire la réservation dans le tab => mettre à True les journées qui sont réservées
+                            for (int ctr = dateArrivee; ctr < dateDepart; ctr++)
+                            {
+                                campingDispo[comboBox_terrains.SelectedIndex, ctr] = true;
+
+                                // ajout dans le log de réservation
+                                 listBox_reservation.Items.Add("Site : " +
+                                    (comboBox_terrains.SelectedIndex + 1).ToString() + " Jour: " + ctr +
+                                    "\r\n");
+                            }
 
                         }
                         catch (Exception ex)
@@ -337,6 +334,15 @@ namespace SarahMerzoukTP02
                         richTextBox_T10.BackColor = Color.Red;
                     }
                 }
+
+            }
+        }
+
+        private void comboBox_typeDePaiement_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (textBox_courriel.Text != "" && textBox_nom.Text != "" && textBox_nbAdultes.Text != "" && textBox_nbEnfants.Text != "" && textBox_coutTotal.Text != "" && textBox_nbNuits.Text != "")
+            {
+                button_reserver.Enabled = true;
 
             }
         }
