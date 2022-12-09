@@ -45,7 +45,7 @@
             this.label_T9 = new System.Windows.Forms.Label();
             this.label_T10 = new System.Windows.Forms.Label();
             this.richTextBox_T1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxT2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_T2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox_T3 = new System.Windows.Forms.RichTextBox();
             this.richTextBox_T4 = new System.Windows.Forms.RichTextBox();
             this.richTextBox_T5 = new System.Windows.Forms.RichTextBox();
@@ -132,10 +132,11 @@
             // 
             this.button_reserver.Location = new System.Drawing.Point(50, 1317);
             this.button_reserver.Name = "button_reserver";
-            this.button_reserver.Size = new System.Drawing.Size(1622, 84);
+            this.button_reserver.Size = new System.Drawing.Size(442, 84);
             this.button_reserver.TabIndex = 3;
             this.button_reserver.Text = "Réserver le terrain";
             this.button_reserver.UseVisualStyleBackColor = true;
+            this.button_reserver.Click += new System.EventHandler(this.button_reserver_Click_1);
             // 
             // button_terrainsDispos
             // 
@@ -145,6 +146,7 @@
             this.button_terrainsDispos.TabIndex = 4;
             this.button_terrainsDispos.Text = "Vérifier les disponibilités";
             this.button_terrainsDispos.UseVisualStyleBackColor = true;
+            this.button_terrainsDispos.Click += new System.EventHandler(this.button_terrainsDispos_Click);
             // 
             // label_T1
             // 
@@ -244,13 +246,13 @@
             this.richTextBox_T1.TabIndex = 15;
             this.richTextBox_T1.Text = "";
             // 
-            // richTextBoxT2
+            // richTextBox_T2
             // 
-            this.richTextBoxT2.Location = new System.Drawing.Point(230, 827);
-            this.richTextBoxT2.Name = "richTextBoxT2";
-            this.richTextBoxT2.Size = new System.Drawing.Size(102, 46);
-            this.richTextBoxT2.TabIndex = 16;
-            this.richTextBoxT2.Text = "";
+            this.richTextBox_T2.Location = new System.Drawing.Point(230, 827);
+            this.richTextBox_T2.Name = "richTextBox_T2";
+            this.richTextBox_T2.Size = new System.Drawing.Size(102, 46);
+            this.richTextBox_T2.TabIndex = 16;
+            this.richTextBox_T2.Text = "";
             // 
             // richTextBox_T3
             // 
@@ -665,7 +667,7 @@
             this.Controls.Add(this.richTextBox_T5);
             this.Controls.Add(this.richTextBox_T4);
             this.Controls.Add(this.richTextBox_T3);
-            this.Controls.Add(this.richTextBoxT2);
+            this.Controls.Add(this.richTextBox_T2);
             this.Controls.Add(this.richTextBox_T1);
             this.Controls.Add(this.label_T10);
             this.Controls.Add(this.label_T9);
@@ -719,7 +721,7 @@
         private Label label_T9;
         private Label label_T10;
         private RichTextBox richTextBox_T1;
-        private RichTextBox richTextBoxT2;
+        private RichTextBox richTextBox_T2;
         private RichTextBox richTextBox_T3;
         private RichTextBox richTextBox_T4;
         private RichTextBox richTextBox_T5;

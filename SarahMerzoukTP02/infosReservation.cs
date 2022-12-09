@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SarahMerzoukTP02
 {
@@ -17,7 +18,7 @@ namespace SarahMerzoukTP02
         const int nbJours = 365;
 
         int nbTerrains;
-        Boolean[,] campingDispo;
+        Boolean[,] campingDispo; // tableau pour réservation - disponibilité du camping
 
         Camping campingChoisi;
         DateTimePicker dateDebut;
@@ -209,6 +210,64 @@ namespace SarahMerzoukTP02
             else
             {
                 errorProvider_typePaiement.Clear();
+
+            }
+        }
+
+        private void button_reserver_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox_terrains.SelectedIndex != -1) //
+            {
+                int dateArrivee = dateDebut.Value.DayOfYear;
+                int dateDepart = dateFin.Value.DayOfYear;
+
+                if (dateArrivee < dateDepart)
+                {
+                    // faire la réservation dans le tab => mettre à True les journées qui sont réservées
+                    for (int ctr = dateArrivee; ctr < dateDepart; ctr++)
+                    {
+                        campingDispo[comboBox_terrains.SelectedIndex, ctr] = true;
+                    }
+
+                }
+            }
+        }
+
+        private void button_terrainsDispos_Click(object sender, EventArgs e)
+        {
+            richTextBox_T1.BackColor = Color.Green;
+            richTextBox_T2.BackColor = Color.Green;
+            richTextBox_T3.BackColor = Color.Green;
+            richTextBox_T4.BackColor = Color.Green;
+            richTextBox_T5.BackColor = Color.Green;
+            richTextBox_T6.BackColor = Color.Green;
+            richTextBox_T7.BackColor = Color.Green;
+            richTextBox_T8.BackColor = Color.Green;
+            richTextBox_T9.BackColor = Color.Green;
+            richTextBox_T10.BackColor = Color.Green;
+
+            int dateArrivee = dateDebut.Value.DayOfYear;
+            int dateDepart = dateFin.Value.DayOfYear;
+
+            if (dateArrivee < dateDepart)
+            {
+                for (int ctr = dateArrivee; ctr < dateDepart; ctr++)
+                {
+                    // Terrani 1 : si réserver = change la couleur
+
+                    if (campingDispo[0, ctr])
+                    {
+                        richTextBox_T1.BackColor = Color.Red;
+                    }
+                    if (campingDispo[1, ctr])
+                    {
+                        richTextBox_T2.BackColor = Color.Red;
+                    }
+                    if (campingDispo[2, ctr])
+                    {
+                        richTextBox_T3.BackColor = Color.Red;
+                    }
+                }
 
             }
         }
