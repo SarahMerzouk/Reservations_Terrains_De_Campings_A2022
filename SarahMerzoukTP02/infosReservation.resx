@@ -78,4 +78,7 @@
   <metadata name="errorProvider_maxDePersonnes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 92</value>
   </metadata>
+  <metadata name="saveFileDialogFichier.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>621, 101</value>
+  </metadata>
 </root>

@@ -91,6 +91,7 @@
             this.errorProvider_typePaiement = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_maxDePersonnes = new System.Windows.Forms.ErrorProvider(this.components);
             this.textBoxLogReservation = new System.Windows.Forms.TextBox();
+            this.saveFileDialogFichier = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_campingChoisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbAdultes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbEnfants)).BeginInit();
@@ -777,5 +778,6 @@
         private ErrorProvider errorProvider_typePaiement;
         private ErrorProvider errorProvider_maxDePersonnes;
         private TextBox textBoxLogReservation;
+        private SaveFileDialog saveFileDialogFichier;
     }
 }

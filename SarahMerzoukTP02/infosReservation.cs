@@ -27,6 +27,8 @@ namespace SarahMerzoukTP02
 
         decimal nbDePersonnes;
 
+        private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
+
         public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin)
         {
             campingChoisi = pCampingChoisi;
@@ -215,6 +217,15 @@ namespace SarahMerzoukTP02
 
         private void button_reserver_Click_1(object sender, EventArgs e)
         {
+            numeroReservation++;
+
+            saveFileDialogFichier.InitialDirectory = chemin;
+            saveFileDialogFichier.Title = campingChoisi.getNomFichierDuCamping();
+            saveFileDialogFichier.FileName = campingChoisi.getNomFichierDuCamping();
+
+            saveFileDialogFichier.Filter = "Fichier texte|*.txt";
+            saveFileDialogFichier.FilterIndex = 1;
+
             if (comboBox_terrains.SelectedIndex != -1) //
             {
                 int dateArrivee = dateDebut.Value.DayOfYear;
@@ -233,7 +244,33 @@ namespace SarahMerzoukTP02
                             "\r\n";
                     }
 
+
+                    // Écriture de la réservation dans un fichier texte
+                    if (saveFileDialogFichier.ShowDialog() == DialogResult.OK)
+                    {
+                        // sauvegarde du fichier
+                        try
+                        {
+                            StreamWriter ecriture = new StreamWriter(saveFileDialogFichier.FileName, true);
+
+                            ecriture.WriteLine(numeroReservation + " ; " + dateDebut.Value + " ; " + dateFin.Value + " ; " + comboBox_terrains.SelectedItem + " ; "
+                                + textBox_nbAdultes.Text + " ; " + textBox_nbEnfants.Text + " ; " + textBox_nom.Text + " ; " + textBox_courriel.Text + " ; "
+                                + comboBox_typeDePaiement.SelectedItem + " ; " + textBox_coutTotal.Text + "\r\n");
+
+                            ecriture.Close();
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Erreur de fichier: " + ex.Message, "Sauvegarde de fichier",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+
                 }
+
+                statusStrip_reservation.Text = "Réservation sauvegardée dans le fichier";
             }
         }
 
