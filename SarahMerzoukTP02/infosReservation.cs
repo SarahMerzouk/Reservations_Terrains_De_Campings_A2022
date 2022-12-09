@@ -215,6 +215,7 @@ namespace SarahMerzoukTP02
 
         private void button_reserver_Click_1(object sender, EventArgs e)
         {
+            numeroReservation++;
             
             saveFileDialogFichier.InitialDirectory = chemin;
             saveFileDialogFichier.Title = campingChoisi.getNomFichierDuCamping();
@@ -239,11 +240,17 @@ namespace SarahMerzoukTP02
                         {
                             StreamWriter ecriture = new StreamWriter(saveFileDialogFichier.FileName, true);
 
-                            ecriture.WriteLine(numeroReservation + " ; " + dateDebut.Value + " ; " + dateFin.Value + " ; " + comboBox_terrains.SelectedItem + " ; "
-                                + textBox_nbAdultes.Text + " ; " + textBox_nbEnfants.Text + " ; " + textBox_nom.Text + " ; " + textBox_courriel.Text + " ; "
-                                + comboBox_typeDePaiement.SelectedItem + " ; " + textBox_coutTotal.Text + "\r\n");
+                            if (!textBox_nbNuits.Text.Equals("0") && nbDePersonnes != 0)
+                            {
+                                ecriture.WriteLine(numeroReservation + " ; " + dateDebut.Value + " ; " + dateFin.Value + " ; " + comboBox_terrains.SelectedItem + " ; "
+                                  + textBox_nbAdultes.Text + " ; " + textBox_nbEnfants.Text + " ; " + textBox_nom.Text + " ; " + textBox_courriel.Text + " ; "
+                                  + comboBox_typeDePaiement.SelectedItem + " ; " + textBox_coutTotal.Text + "\r\n");
 
-                            ecriture.Close();
+                                ecriture.Close();
+                            } else
+                            {
+                                MessageBox.Show("Une réservation à 0 nuit ou à 0 nombre de personnes n’existe pas dans notre système.");
+                            }
 
                             // faire la réservation dans le tab => mettre à True les journées qui sont réservées
                             for (int ctr = dateArrivee; ctr < dateDepart; ctr++)

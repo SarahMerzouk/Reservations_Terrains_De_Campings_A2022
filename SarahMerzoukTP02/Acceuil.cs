@@ -65,7 +65,6 @@ namespace SarahMerzoukTP02
 
         private void button_reservation_Click(object sender, EventArgs e)
         {
-            numeroReservation++;
 
             if (dateTimePicker_debut.Value.DayOfYear < dateTimePicker_fin.Value.DayOfYear)
             {
