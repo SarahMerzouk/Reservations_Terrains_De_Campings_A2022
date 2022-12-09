@@ -16,8 +16,8 @@ namespace SarahMerzoukTP02
     {
         const int maxReservation = 8;
         const int nbJours = 365;
+        const int nbTerrains = 10; // Car j'ai un maximum de 10 terrains
 
-        int nbTerrains;
         Boolean[,] campingDispo; // tableau pour réservation - disponibilité du camping
 
         Camping campingChoisi;
@@ -81,7 +81,6 @@ namespace SarahMerzoukTP02
             textBox_nbNuits.Text = nbNuit.ToString();
             
             // tableau pour réservation - disponibilité du camping
-            nbTerrains = campingChoisi.getNbTerrains();
             campingDispo = new Boolean[nbTerrains, nbJours];
 
             // initialiser des terrains dans le camping
@@ -227,6 +226,11 @@ namespace SarahMerzoukTP02
                     for (int ctr = dateArrivee; ctr < dateDepart; ctr++)
                     {
                         campingDispo[comboBox_terrains.SelectedIndex, ctr] = true;
+
+                        // ajout dans le log de réservation
+                        textBoxLogReservation.Text += "Site : " +
+                            (comboBox_terrains.SelectedIndex + 1).ToString() + " Jour: " + ctr +
+                            "\r\n";
                     }
 
                 }
@@ -266,6 +270,34 @@ namespace SarahMerzoukTP02
                     if (campingDispo[2, ctr])
                     {
                         richTextBox_T3.BackColor = Color.Red;
+                    }
+                    if (campingDispo[3, ctr])
+                    {
+                        richTextBox_T4.BackColor = Color.Red;
+                    }
+                    if (campingDispo[4, ctr])
+                    {
+                        richTextBox_T5.BackColor = Color.Red;
+                    }
+                    if (campingDispo[5, ctr])
+                    {
+                        richTextBox_T6.BackColor = Color.Red;
+                    }
+                    if (campingDispo[6, ctr])
+                    {
+                        richTextBox_T7.BackColor = Color.Red;
+                    }
+                    if (campingDispo[7, ctr])
+                    {
+                        richTextBox_T8.BackColor = Color.Red;
+                    }
+                    if (campingDispo[8, ctr])
+                    {
+                        richTextBox_T9.BackColor = Color.Red;
+                    }
+                    if (campingDispo[9, ctr])
+                    {
+                        richTextBox_T10.BackColor = Color.Red;
                     }
                 }
 

@@ -90,6 +90,7 @@
             this.errorProvider_courriel = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_typePaiement = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_maxDePersonnes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.textBoxLogReservation = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_campingChoisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbAdultes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nbEnfants)).BeginInit();
@@ -322,7 +323,7 @@
             // 
             this.label_enfants.AutoSize = true;
             this.label_enfants.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_enfants.Location = new System.Drawing.Point(693, 299);
+            this.label_enfants.Location = new System.Drawing.Point(919, 304);
             this.label_enfants.Name = "label_enfants";
             this.label_enfants.Size = new System.Drawing.Size(419, 46);
             this.label_enfants.TabIndex = 26;
@@ -330,7 +331,7 @@
             // 
             // numericUpDown_nbAdultes
             // 
-            this.numericUpDown_nbAdultes.Location = new System.Drawing.Point(1137, 229);
+            this.numericUpDown_nbAdultes.Location = new System.Drawing.Point(1363, 234);
             this.numericUpDown_nbAdultes.Maximum = new decimal(new int[] {
             8,
             0,
@@ -343,7 +344,7 @@
             // 
             // numericUpDown_nbEnfants
             // 
-            this.numericUpDown_nbEnfants.Location = new System.Drawing.Point(1137, 290);
+            this.numericUpDown_nbEnfants.Location = new System.Drawing.Point(1363, 295);
             this.numericUpDown_nbEnfants.Maximum = new decimal(new int[] {
             8,
             0,
@@ -358,7 +359,7 @@
             // 
             this.label_adultes.AutoSize = true;
             this.label_adultes.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_adultes.Location = new System.Drawing.Point(693, 238);
+            this.label_adultes.Location = new System.Drawing.Point(919, 243);
             this.label_adultes.Name = "label_adultes";
             this.label_adultes.Size = new System.Drawing.Size(177, 46);
             this.label_adultes.TabIndex = 25;
@@ -378,7 +379,7 @@
             // 
             this.label_infosSurQt.AutoSize = true;
             this.label_infosSurQt.Font = new System.Drawing.Font("MV Boli", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_infosSurQt.Location = new System.Drawing.Point(693, 149);
+            this.label_infosSurQt.Location = new System.Drawing.Point(919, 154);
             this.label_infosSurQt.Name = "label_infosSurQt";
             this.label_infosSurQt.Size = new System.Drawing.Size(447, 52);
             this.label_infosSurQt.TabIndex = 34;
@@ -388,7 +389,7 @@
             // 
             this.label_infosDuClient.AutoSize = true;
             this.label_infosDuClient.Font = new System.Drawing.Font("MV Boli", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_infosDuClient.Location = new System.Drawing.Point(693, 528);
+            this.label_infosDuClient.Location = new System.Drawing.Point(919, 533);
             this.label_infosDuClient.Name = "label_infosDuClient";
             this.label_infosDuClient.Size = new System.Drawing.Size(810, 52);
             this.label_infosDuClient.TabIndex = 35;
@@ -398,7 +399,7 @@
             // 
             this.label_nom.AutoSize = true;
             this.label_nom.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_nom.Location = new System.Drawing.Point(702, 597);
+            this.label_nom.Location = new System.Drawing.Point(928, 597);
             this.label_nom.Name = "label_nom";
             this.label_nom.Size = new System.Drawing.Size(129, 46);
             this.label_nom.TabIndex = 36;
@@ -408,7 +409,7 @@
             // 
             this.label_courriel.AutoSize = true;
             this.label_courriel.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_courriel.Location = new System.Drawing.Point(702, 659);
+            this.label_courriel.Location = new System.Drawing.Point(928, 664);
             this.label_courriel.Name = "label_courriel";
             this.label_courriel.Size = new System.Drawing.Size(177, 46);
             this.label_courriel.TabIndex = 37;
@@ -418,7 +419,7 @@
             // 
             this.label_typeDePaiement.AutoSize = true;
             this.label_typeDePaiement.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_typeDePaiement.Location = new System.Drawing.Point(693, 709);
+            this.label_typeDePaiement.Location = new System.Drawing.Point(919, 714);
             this.label_typeDePaiement.Name = "label_typeDePaiement";
             this.label_typeDePaiement.Size = new System.Drawing.Size(357, 46);
             this.label_typeDePaiement.TabIndex = 38;
@@ -427,14 +428,14 @@
             // comboBox_typeDePaiement
             // 
             this.comboBox_typeDePaiement.FormattingEnabled = true;
-            this.comboBox_typeDePaiement.Location = new System.Drawing.Point(1070, 704);
+            this.comboBox_typeDePaiement.Location = new System.Drawing.Point(1296, 709);
             this.comboBox_typeDePaiement.Name = "comboBox_typeDePaiement";
             this.comboBox_typeDePaiement.Size = new System.Drawing.Size(363, 56);
             this.comboBox_typeDePaiement.TabIndex = 39;
             // 
             // textBox_nom
             // 
-            this.textBox_nom.Location = new System.Drawing.Point(1070, 583);
+            this.textBox_nom.Location = new System.Drawing.Point(1296, 588);
             this.textBox_nom.Name = "textBox_nom";
             this.textBox_nom.Size = new System.Drawing.Size(363, 55);
             this.textBox_nom.TabIndex = 40;
@@ -442,7 +443,7 @@
             // 
             // textBox_courriel
             // 
-            this.textBox_courriel.Location = new System.Drawing.Point(1070, 643);
+            this.textBox_courriel.Location = new System.Drawing.Point(1296, 648);
             this.textBox_courriel.Name = "textBox_courriel";
             this.textBox_courriel.Size = new System.Drawing.Size(363, 55);
             this.textBox_courriel.TabIndex = 41;
@@ -452,7 +453,7 @@
             // 
             this.label_facture.AutoSize = true;
             this.label_facture.Font = new System.Drawing.Font("MV Boli", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_facture.Location = new System.Drawing.Point(683, 811);
+            this.label_facture.Location = new System.Drawing.Point(909, 816);
             this.label_facture.Name = "label_facture";
             this.label_facture.Size = new System.Drawing.Size(209, 52);
             this.label_facture.TabIndex = 42;
@@ -462,7 +463,7 @@
             // 
             this.label_nbNuits.AutoSize = true;
             this.label_nbNuits.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_nbNuits.Location = new System.Drawing.Point(693, 1083);
+            this.label_nbNuits.Location = new System.Drawing.Point(919, 1088);
             this.label_nbNuits.Name = "label_nbNuits";
             this.label_nbNuits.Size = new System.Drawing.Size(338, 46);
             this.label_nbNuits.TabIndex = 46;
@@ -472,7 +473,7 @@
             // 
             this.label_totalDeGens.AutoSize = true;
             this.label_totalDeGens.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_totalDeGens.Location = new System.Drawing.Point(693, 1020);
+            this.label_totalDeGens.Location = new System.Drawing.Point(919, 1025);
             this.label_totalDeGens.Name = "label_totalDeGens";
             this.label_totalDeGens.Size = new System.Drawing.Size(390, 46);
             this.label_totalDeGens.TabIndex = 45;
@@ -482,7 +483,7 @@
             // 
             this.label_nbEnfants.AutoSize = true;
             this.label_nbEnfants.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_nbEnfants.Location = new System.Drawing.Point(693, 961);
+            this.label_nbEnfants.Location = new System.Drawing.Point(919, 966);
             this.label_nbEnfants.Name = "label_nbEnfants";
             this.label_nbEnfants.Size = new System.Drawing.Size(419, 46);
             this.label_nbEnfants.TabIndex = 44;
@@ -492,7 +493,7 @@
             // 
             this.label_nbAdultes.AutoSize = true;
             this.label_nbAdultes.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_nbAdultes.Location = new System.Drawing.Point(693, 900);
+            this.label_nbAdultes.Location = new System.Drawing.Point(919, 905);
             this.label_nbAdultes.Name = "label_nbAdultes";
             this.label_nbAdultes.Size = new System.Drawing.Size(177, 46);
             this.label_nbAdultes.TabIndex = 43;
@@ -500,7 +501,7 @@
             // 
             // textBox_nbNuits
             // 
-            this.textBox_nbNuits.Location = new System.Drawing.Point(1118, 1069);
+            this.textBox_nbNuits.Location = new System.Drawing.Point(1344, 1074);
             this.textBox_nbNuits.Name = "textBox_nbNuits";
             this.textBox_nbNuits.ReadOnly = true;
             this.textBox_nbNuits.Size = new System.Drawing.Size(321, 55);
@@ -508,7 +509,7 @@
             // 
             // textBox_nbPersonnes
             // 
-            this.textBox_nbPersonnes.Location = new System.Drawing.Point(1118, 1006);
+            this.textBox_nbPersonnes.Location = new System.Drawing.Point(1344, 1011);
             this.textBox_nbPersonnes.Name = "textBox_nbPersonnes";
             this.textBox_nbPersonnes.ReadOnly = true;
             this.textBox_nbPersonnes.Size = new System.Drawing.Size(321, 55);
@@ -516,7 +517,7 @@
             // 
             // textBox_nbAdultes
             // 
-            this.textBox_nbAdultes.Location = new System.Drawing.Point(1118, 878);
+            this.textBox_nbAdultes.Location = new System.Drawing.Point(1344, 883);
             this.textBox_nbAdultes.Name = "textBox_nbAdultes";
             this.textBox_nbAdultes.ReadOnly = true;
             this.textBox_nbAdultes.Size = new System.Drawing.Size(321, 55);
@@ -524,7 +525,7 @@
             // 
             // textBox_nbEnfants
             // 
-            this.textBox_nbEnfants.Location = new System.Drawing.Point(1118, 945);
+            this.textBox_nbEnfants.Location = new System.Drawing.Point(1344, 950);
             this.textBox_nbEnfants.Name = "textBox_nbEnfants";
             this.textBox_nbEnfants.ReadOnly = true;
             this.textBox_nbEnfants.Size = new System.Drawing.Size(321, 55);
@@ -534,7 +535,7 @@
             // 
             this.label_coutTotal.AutoSize = true;
             this.label_coutTotal.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_coutTotal.Location = new System.Drawing.Point(693, 1151);
+            this.label_coutTotal.Location = new System.Drawing.Point(919, 1156);
             this.label_coutTotal.Name = "label_coutTotal";
             this.label_coutTotal.Size = new System.Drawing.Size(231, 46);
             this.label_coutTotal.TabIndex = 51;
@@ -542,7 +543,7 @@
             // 
             // textBox_coutTotal
             // 
-            this.textBox_coutTotal.Location = new System.Drawing.Point(1112, 1130);
+            this.textBox_coutTotal.Location = new System.Drawing.Point(1338, 1135);
             this.textBox_coutTotal.Name = "textBox_coutTotal";
             this.textBox_coutTotal.ReadOnly = true;
             this.textBox_coutTotal.Size = new System.Drawing.Size(321, 55);
@@ -628,11 +629,20 @@
             // 
             this.errorProvider_maxDePersonnes.ContainerControl = this;
             // 
+            // textBoxLogReservation
+            // 
+            this.textBoxLogReservation.Location = new System.Drawing.Point(449, 777);
+            this.textBoxLogReservation.Multiline = true;
+            this.textBoxLogReservation.Name = "textBoxLogReservation";
+            this.textBoxLogReservation.Size = new System.Drawing.Size(411, 500);
+            this.textBoxLogReservation.TabIndex = 55;
+            // 
             // infosReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 1503);
+            this.Controls.Add(this.textBoxLogReservation);
             this.Controls.Add(this.statusStrip_reservation);
             this.Controls.Add(this.menuStrip_reservation);
             this.Controls.Add(this.textBox_coutTotal);
@@ -766,5 +776,6 @@
         private ErrorProvider errorProvider_courriel;
         private ErrorProvider errorProvider_typePaiement;
         private ErrorProvider errorProvider_maxDePersonnes;
+        private TextBox textBoxLogReservation;
     }
 }
