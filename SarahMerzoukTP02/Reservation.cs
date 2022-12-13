@@ -18,10 +18,11 @@ namespace SarahMerzoukTP02
         private int _nbAdultes;
         private int _nbEnfants;
         private decimal _coutTotal;
+        private string _terrain;
 
         public Reservation() { }
 
-        public Reservation(int noReservation , int noCamping, string nomClient, string courriel, string payement, DateTimePicker debut, DateTimePicker fin, int nbAdultes, int nbEnfants, decimal cout  )
+        public Reservation(int noReservation , int noCamping, string nomClient, string courriel, string payement, DateTimePicker debut, DateTimePicker fin, int nbAdultes, int nbEnfants, decimal cout, string pTerrain  )
         {
             _noReservation = noReservation;
             _noCamping = noCamping;
@@ -33,6 +34,7 @@ namespace SarahMerzoukTP02
             _nbAdultes = nbAdultes;
             _nbEnfants = nbEnfants;
             _coutTotal = cout;
+            _terrain = pTerrain;
         }
 
         public int getNoReservation()
@@ -83,6 +85,11 @@ namespace SarahMerzoukTP02
         public decimal getCoutTotal()
         {
             return _coutTotal;
+        }
+
+        public string getTerrain()
+        {
+            return _terrain;
         }
     }
 }

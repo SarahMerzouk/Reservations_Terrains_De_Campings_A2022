@@ -702,6 +702,7 @@
             this.Controls.Add(this.pictureBox_campingChoisi);
             this.Controls.Add(this.label_campingChoisi);
             this.Name = "infosReservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrée des informations concernant la réservation";
             this.Load += new System.EventHandler(this.Reservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_campingChoisi)).EndInit();

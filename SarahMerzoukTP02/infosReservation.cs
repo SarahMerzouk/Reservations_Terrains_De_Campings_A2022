@@ -259,7 +259,7 @@ namespace SarahMerzoukTP02
                                 ecriture.Close();
 
                                 ctrReservation++;
-                                uneReservation = new Reservation(numeroReservation, campingChoisi.getNoCamping(), textBox_nom.Text, textBox_courriel.Text, comboBox_typeDePaiement.Text, dateDebut, dateFin, nbAdultes, nbEnfants, cout);
+                                uneReservation = new Reservation(numeroReservation, campingChoisi.getNoCamping(), textBox_nom.Text, textBox_courriel.Text, comboBox_typeDePaiement.Text, dateDebut, dateFin, nbAdultes, nbEnfants, cout, terrainChoisi);
                                 desReservations[ctrReservation] = uneReservation;
 
                             } else

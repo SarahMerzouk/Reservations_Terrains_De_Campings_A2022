@@ -41,9 +41,14 @@ namespace SarahMerzoukTP02
 
         private void comboBox_reservations_SelectedIndexChanged(object sender, EventArgs e)
         {
-            reservationChoisi = (Reservation) comboBox_reservations.SelectedItem;
+            reservationChoisi = reservations[comboBox_reservations.SelectedIndex];
 
-            textBox_terrainChoisi.TabIndex = reservationChoisi.
+            textBox_terrainChoisi.Text = reservationChoisi.getTerrain();
+            textBox_nbAdults.Text = reservationChoisi.getNbAdultes().ToString();
+            textBox_nbEnfants.Text = reservationChoisi.getNbEnfants().ToString();
+            textBox_nbNuits.Text = (reservationChoisi.getFinReservation().Value.DayOfYear - reservationChoisi.getDebutReservation().Value.DayOfYear).ToString();
+            textBox_typeDePaiement.Text = reservationChoisi.getTypeDePaiement();
+            textBox_coutTotal.Text = reservationChoisi.getCoutTotal() + " $";
         }
     }
 }
