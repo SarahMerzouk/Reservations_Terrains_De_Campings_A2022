@@ -129,6 +129,7 @@
             this.comboBox_terrains.Name = "comboBox_terrains";
             this.comboBox_terrains.Size = new System.Drawing.Size(594, 56);
             this.comboBox_terrains.TabIndex = 2;
+            this.comboBox_terrains.SelectedIndexChanged += new System.EventHandler(this.comboBox_terrains_SelectedIndexChanged);
             // 
             // button_reserver
             // 
@@ -575,7 +576,7 @@
             this.réservationToolStripMenuItem});
             this.menuStrip_reservation.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_reservation.Name = "menuStrip_reservation";
-            this.menuStrip_reservation.Size = new System.Drawing.Size(1782, 61);
+            this.menuStrip_reservation.Size = new System.Drawing.Size(1782, 56);
             this.menuStrip_reservation.TabIndex = 54;
             this.menuStrip_reservation.Text = "menuStrip1";
             // 
@@ -587,7 +588,7 @@
             this.afficherUneRéservationToolStripMenuItem,
             this.retourAuMenuPrincipalToolStripMenuItem});
             this.réservationToolStripMenuItem.Name = "réservationToolStripMenuItem";
-            this.réservationToolStripMenuItem.Size = new System.Drawing.Size(232, 57);
+            this.réservationToolStripMenuItem.Size = new System.Drawing.Size(232, 52);
             this.réservationToolStripMenuItem.Text = "Réservation";
             // 
             // nouvelleRéservationToolStripMenuItem

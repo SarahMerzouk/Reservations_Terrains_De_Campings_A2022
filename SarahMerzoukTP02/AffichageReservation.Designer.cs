@@ -72,6 +72,7 @@
             this.comboBox_reservations.Name = "comboBox_reservations";
             this.comboBox_reservations.Size = new System.Drawing.Size(838, 56);
             this.comboBox_reservations.TabIndex = 3;
+            this.comboBox_reservations.SelectedIndexChanged += new System.EventHandler(this.comboBox_reservations_SelectedIndexChanged);
             // 
             // label_terrainChoisi
             // 

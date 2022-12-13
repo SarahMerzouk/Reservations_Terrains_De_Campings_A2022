@@ -10,7 +10,6 @@ namespace SarahMerzoukTP02
         Camping campingDeLaPlageStSimon = new Camping(3, "Camping de la plage de St-Siméon", 10, "campingStSimeon.jpg", "RESERV_SIMEON.txt");
         Camping[] campings = new Camping[4];
         Camping campingChoisi = null;
-        int numeroReservation = 0;
 
         public Acceuil()
         {
@@ -68,7 +67,7 @@ namespace SarahMerzoukTP02
 
             if (dateTimePicker_debut.Value.DayOfYear < dateTimePicker_fin.Value.DayOfYear)
             {
-                infosReservation saisirInfos = new infosReservation(campingChoisi, dateTimePicker_debut, dateTimePicker_fin, numeroReservation);
+                infosReservation saisirInfos = new infosReservation(campingChoisi, dateTimePicker_debut, dateTimePicker_fin);
 
                 saisirInfos.ShowDialog();
             } else

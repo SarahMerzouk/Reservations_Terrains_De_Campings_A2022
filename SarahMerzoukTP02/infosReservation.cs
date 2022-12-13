@@ -23,22 +23,23 @@ namespace SarahMerzoukTP02
         Camping campingChoisi;
         DateTimePicker dateDebut;
         DateTimePicker dateFin;
-        int numeroReservation;
+        int numeroReservation = 0;
 
         decimal nbDePersonnes;
 
         Reservation uneReservation;
         Reservation[] desReservations = new Reservation[200];
-        int ctrReservation = -1;
+        int ctrReservation = -1; // conteur des réservations, va me servir pour le tableau des réservations
+
+        string terrainChoisi; // LE terrain choisi dans le comboBox
 
         private string chemin = Application.StartupPath + "\\"; // bin/debug/nte-window6.0
 
-        public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin, int pNo)
+        public infosReservation(Camping pCampingChoisi, DateTimePicker pDebut, DateTimePicker pFin)
         {
             campingChoisi = pCampingChoisi;
             dateDebut = pDebut;
             dateFin = pFin;
-            numeroReservation = pNo;
 
             InitializeComponent();
         }
@@ -258,7 +259,7 @@ namespace SarahMerzoukTP02
                                 ecriture.Close();
 
                                 ctrReservation++;
-                                uneReservation = new Reservation(numeroReservation, campingChoisi.getNoCamping(), textBox_nom.Text, textBox_courriel.Text, comboBox_typeDePaiement.Text, dateDebut, dateFin, nbAdultes, nbEnfants, cout); ;
+                                uneReservation = new Reservation(numeroReservation, campingChoisi.getNoCamping(), textBox_nom.Text, textBox_courriel.Text, comboBox_typeDePaiement.Text, dateDebut, dateFin, nbAdultes, nbEnfants, cout);
                                 desReservations[ctrReservation] = uneReservation;
 
                             } else
@@ -387,6 +388,11 @@ namespace SarahMerzoukTP02
         {
             AffichageReservation affichage = new AffichageReservation(desReservations, campingChoisi);
             affichage.ShowDialog();
+        }
+
+        private void comboBox_terrains_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            terrainChoisi = comboBox_terrains.Text;
         }
     }
 }

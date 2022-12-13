@@ -14,6 +14,8 @@ namespace SarahMerzoukTP02
     {
         Reservation[] reservations;
         Camping campingChoisi;
+        Reservation reservationChoisi; // Celle dont je veux afficher les informations
+
         public AffichageReservation(Reservation[] pReservations, Camping pCamping)
         {
             reservations = pReservations;
@@ -31,10 +33,17 @@ namespace SarahMerzoukTP02
             {
                 if (reservations[i] != null)
                 {
-                    comboBox_reservations.Items.Add("Nom : " +reservations[i].getNomClient() + " Courriel : " + reservations[i].getCourriel());
+                    comboBox_reservations.Items.Add("#: " + reservations[i].getNoReservation() + " | Nom : " +reservations[i].getNomClient() + " | Courriel : " + reservations[i].getCourriel());
                 }
             }
 
+        }
+
+        private void comboBox_reservations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            reservationChoisi = (Reservation) comboBox_reservations.SelectedItem;
+
+            textBox_terrainChoisi.TabIndex = reservationChoisi.
         }
     }
 }
