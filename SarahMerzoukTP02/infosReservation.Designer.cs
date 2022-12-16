@@ -133,9 +133,10 @@
             // 
             // button_reserver
             // 
-            this.button_reserver.Location = new System.Drawing.Point(50, 1317);
+            this.button_reserver.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_reserver.Location = new System.Drawing.Point(50, 1316);
             this.button_reserver.Name = "button_reserver";
-            this.button_reserver.Size = new System.Drawing.Size(442, 84);
+            this.button_reserver.Size = new System.Drawing.Size(493, 84);
             this.button_reserver.TabIndex = 3;
             this.button_reserver.Text = "Réserver le terrain";
             this.button_reserver.UseVisualStyleBackColor = true;
@@ -143,9 +144,10 @@
             // 
             // button_terrainsDispos
             // 
+            this.button_terrainsDispos.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_terrainsDispos.Location = new System.Drawing.Point(50, 661);
             this.button_terrainsDispos.Name = "button_terrainsDispos";
-            this.button_terrainsDispos.Size = new System.Drawing.Size(442, 89);
+            this.button_terrainsDispos.Size = new System.Drawing.Size(493, 89);
             this.button_terrainsDispos.TabIndex = 4;
             this.button_terrainsDispos.Text = "Vérifier les disponibilités";
             this.button_terrainsDispos.UseVisualStyleBackColor = true;
@@ -648,6 +650,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1782, 1503);
             this.Controls.Add(this.listBox_reservation);
             this.Controls.Add(this.statusStrip_reservation);

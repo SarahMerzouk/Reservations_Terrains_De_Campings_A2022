@@ -85,6 +85,7 @@
             // 
             // comboBox_choixHebergement
             // 
+            this.comboBox_choixHebergement.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox_choixHebergement.FormattingEnabled = true;
             this.comboBox_choixHebergement.Location = new System.Drawing.Point(37, 634);
             this.comboBox_choixHebergement.Name = "comboBox_choixHebergement";
@@ -94,21 +95,23 @@
             // 
             // dateTimePicker_debut
             // 
+            this.dateTimePicker_debut.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker_debut.Location = new System.Drawing.Point(37, 800);
             this.dateTimePicker_debut.MaxDate = new System.DateTime(2022, 10, 30, 0, 0, 0, 0);
             this.dateTimePicker_debut.MinDate = new System.DateTime(2022, 5, 1, 0, 0, 0, 0);
             this.dateTimePicker_debut.Name = "dateTimePicker_debut";
-            this.dateTimePicker_debut.Size = new System.Drawing.Size(411, 55);
+            this.dateTimePicker_debut.Size = new System.Drawing.Size(411, 54);
             this.dateTimePicker_debut.TabIndex = 5;
             this.dateTimePicker_debut.Value = new System.DateTime(2022, 10, 30, 0, 0, 0, 0);
             // 
             // dateTimePicker_fin
             // 
+            this.dateTimePicker_fin.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker_fin.Location = new System.Drawing.Point(507, 800);
             this.dateTimePicker_fin.MaxDate = new System.DateTime(2022, 10, 31, 0, 0, 0, 0);
             this.dateTimePicker_fin.MinDate = new System.DateTime(2022, 5, 2, 0, 0, 0, 0);
             this.dateTimePicker_fin.Name = "dateTimePicker_fin";
-            this.dateTimePicker_fin.Size = new System.Drawing.Size(450, 55);
+            this.dateTimePicker_fin.Size = new System.Drawing.Size(450, 54);
             this.dateTimePicker_fin.TabIndex = 6;
             this.dateTimePicker_fin.Value = new System.DateTime(2022, 10, 26, 0, 0, 0, 0);
             // 
@@ -134,6 +137,7 @@
             // 
             // button_reservation
             // 
+            this.button_reservation.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_reservation.Location = new System.Drawing.Point(37, 891);
             this.button_reservation.Name = "button_reservation";
             this.button_reservation.Size = new System.Drawing.Size(411, 102);
@@ -144,6 +148,7 @@
             // 
             // button_quitter
             // 
+            this.button_quitter.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_quitter.Location = new System.Drawing.Point(507, 891);
             this.button_quitter.Name = "button_quitter";
             this.button_quitter.Size = new System.Drawing.Size(450, 102);
@@ -156,6 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1013, 1011);
             this.Controls.Add(this.button_quitter);
             this.Controls.Add(this.button_reservation);
